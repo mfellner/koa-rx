@@ -1,0 +1,53 @@
+{
+  "name": "koa-rx",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/mfellner/koa-rx.git",
+  "author": "Maximilian Fellner <max.fellner@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "dist": "npm run clean && tsc -p .",
+    "lint": "tslint --type-check --project tsconfig.json",
+    "test": "npm run lint && jest --coverage",
+    "prepublishOnly": "npm run dist"
+  },
+  "peerDependencies": {
+    "koa": "^2.2.0",
+    "rxjs": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "19.2.3",
+    "@types/koa": "2.0.39",
+    "@types/node": "7.0.18",
+    "@types/supertest": "2.0.0",
+    "jest": "20.0.1",
+    "koa": "2.2.0",
+    "rimraf": "2.6.1",
+    "rxjs": "5.4.0",
+    "supertest": "3.0.0",
+    "ts-jest": "20.0.3",
+    "tslint": "5.2.0",
+    "typescript": "2.3.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/test/.*\\.test.ts$",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
+  }
+}
