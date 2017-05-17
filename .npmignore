@@ -1,0 +1,10 @@
+coverage/
+src/
+test/
+.gitignore
+.npmignore
+.travis.yml
+README.md
+tsconfig.json
+tslint.json
+yarn.lock

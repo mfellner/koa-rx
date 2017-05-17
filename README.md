@@ -4,9 +4,9 @@ RxJS middleware for koa. Return Observables in your middleware.
 
 ### Usage
 
-```typescript
-import Koa = require('koa')
-import koaRx from 'koa-rx'
+```javascript
+const Koa = require('koa')
+const koaRx = require('koa-rx').default
 
 const app = new Koa()
 app.use(koaRx())
